@@ -1,0 +1,54 @@
+/* =========================
+   WhatsApp Draggable Float
+   ========================= */
+
+.whatsapp-float-btn {
+  position: fixed;
+  padding: 10px 20px 10px 14px; /* Pill shaped padding */
+  background-color: #25D366; /* Standard WhatsApp Brand Color */
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  box-shadow: 0 6px 16px rgba(37, 211, 102, 0.4);
+  z-index: 1000;
+  cursor: grab;
+  touch-action: none; /* Crucial: Prevent screen page scrolling while dragging on touch devices */
+  transition: transform 0.1s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+  user-select: none; /* Prevents text from highlighting when dragging */
+}
+
+/* Styled text inside the pill */
+.whatsapp-text {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 0.02em;
+  pointer-events: none; /* Let drag events pass through to button */
+}
+
+.whatsapp-float-btn:active {
+  cursor: grabbing;
+  transform: scale(0.95);
+  box-shadow: 0 2px 8px rgba(37, 211, 102, 0.4);
+}
+
+.whatsapp-float-btn:hover {
+  background-color: #1ebe57;
+}
+
+/* Let's give it a subtle pulse animation to draw attention once on load */
+@keyframes whatsappPulse {
+  0% { transform: scale(1); box-shadow: 0 6px 16px rgba(37, 211, 102, 0.4); }
+  50% { transform: scale(1.05); box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6); }
+  100% { transform: scale(1); box-shadow: 0 6px 16px rgba(37, 211, 102, 0.4); }
+}
+
+.whatsapp-float-btn {
+  animation: whatsappPulse 2s infinite;
+}
+
+.whatsapp-float-btn:active {
+  animation: none; /* stop pulsing when grabbed */
+}

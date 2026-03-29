@@ -1,0 +1,140 @@
+.contact-section {
+  padding: 60px 20px;
+  background-color: #ffffff;
+}
+
+.contact-section h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #1f2937;
+}
+
+.contact-desc {
+  max-width: 600px;
+  margin: 0 auto 40px auto;
+  color: #4b5563;
+  line-height: 1.6;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: row;
+  max-width: 1000px;
+  margin: 0 auto;
+  background: #f9fafb;
+  border-radius: 12px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.contact-info {
+  flex: 1;
+  background-color: #1e2db8;
+  color: #ffffff;
+  padding: 40px;
+  text-align: left;
+}
+
+.contact-info h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.contact-info-item {
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-info-item strong {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #c7d2fe;
+  margin-bottom: 4px;
+}
+
+.contact-info-item span {
+  font-size: 16px;
+}
+
+.contact-form {
+  flex: 1.5;
+  padding: 40px;
+  text-align: left;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 8px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 16px;
+  font-family: inherit;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #1e2db8;
+  box-shadow: 0 0 0 3px rgba(30, 45, 184, 0.1);
+}
+
+textarea.form-input {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.submit-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #1e2db8;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.submit-btn:hover {
+  background-color: #16239a;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-section h2 {
+    font-size: 28px;
+  }
+
+  .contact-info {
+    padding: 30px 20px;
+  }
+
+  .contact-form {
+    padding: 30px 20px;
+  }
+
+  .submit-btn {
+    width: 100%;
+  }
+}
