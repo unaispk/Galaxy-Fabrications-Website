@@ -67,14 +67,17 @@ const WhatsApp = () => {
   };
 
   const handleClick = (e) => {
-    // If the user was dragging the button around, prevent the hyperlink/click action!
-    if (isDragging.current) {
-      e.preventDefault();
-      return;
-    }
-    // Launch WhatsApp
-    window.open('https://wa.me/919645565657', '_blank');
-  };
+  if (isDragging.current) {
+    e.preventDefault();
+    return;
+  }
+  
+  // Professional pre-filled message
+  const message = encodeURIComponent("Hi Galaxy Fabrications, I'm interested in your services. Can you help me?");
+  const whatsappUrl = `https://wa.me/919645565657?text=${message}`;
+  
+  window.open(whatsappUrl, '_blank');
+};
 
   return (
     <div
