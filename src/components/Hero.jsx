@@ -20,7 +20,7 @@ function Hero() {
   return (
     <section className="hero">
       <div className="hero-image">
-        <img src={images[current]} alt="Fabrication work" />
+        <img src={images[current]} alt="Fabrication work" loading="eager" fetchpriority="high"/>
       </div>
 
       <div className="hero-content">
